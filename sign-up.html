@@ -26,10 +26,10 @@
           type: "post",
           data: $("#wf-form-Signup-form").serializeArray(),
           success: function () {
-            alert("Form Data Submitted :)");
+            $("#wf-form-Signup-form").trigger("reset");
           },
           error: function () {
-            alert("There was an error :(");
+            $("#wf-form-Signup-form").trigger("reset");
           },
         });
       }

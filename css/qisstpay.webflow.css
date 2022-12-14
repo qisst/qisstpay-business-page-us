@@ -7093,7 +7093,7 @@ blockquote {
 
 .nav-button {
   margin-left: 12px;
-  padding: 11px 47px;
+  padding: 11px 20px;
   border-radius: 30px;
   background-color: #e93a7d;
   font-family: Dmsans, sans-serif;
@@ -7862,9 +7862,9 @@ blockquote {
   align-items: center;
 }
 
-.nav-button-wrap.for-mobile {
+/* .nav-button-wrap.for-mobile {
   display: none;
-}
+} */
 
 .logo-image {
   height: 30px;
@@ -8450,7 +8450,7 @@ blockquote {
 
 .bullet-text {
   color: #7984a9;
-  font-size: 24px;
+  font-size: 14px;
   line-height: 1.16;
   font-weight: 500;
 }
@@ -19157,7 +19157,8 @@ blockquote {
   }
 
   .nav-button {
-    margin-top: 15px;
+    /* margin-top: 15px;
+     */
     margin-left: 0px;
   }
 
@@ -19249,9 +19250,9 @@ blockquote {
     margin-right: 0px;
   }
 
-  .nav-button-wrap {
+  /* .nav-button-wrap {
     display: none;
-  }
+  } */
 
   .nav-button-wrap.for-mobile {
     display: -webkit-box;
