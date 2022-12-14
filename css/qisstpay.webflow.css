@@ -1177,7 +1177,7 @@ blockquote {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 140vh;
   max-height: 900px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;

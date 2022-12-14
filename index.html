@@ -123,83 +123,6 @@
     </div>
     <div data-w-id="7fd71617-88e4-c5ed-6546-c70f7c29b0d6" class="page-wrapper">
       <header class="navbar unhide">
-        <div class="navbar-1-wrapper pink-light">
-          <header class="navbar-1_us">
-            <div class="nac-bar-1_container_us">
-              <div class="nav-bar-container-pk">
-                <div class="user-type-wrapper">
-                  <a
-                    href="../us/business.html"
-                    aria-current="page"
-                    class="top-link w-inline-block w--current"
-                  >
-                    <div class="cta-text">Business</div>
-                    <div class="line vis"></div>
-                  </a>
-                  <a
-                    href="../us-shopper/shopper.html"
-                    data-w-id="77ac171b-a998-9c38-4efe-dd2e23f1613a"
-                    class="top-link hidden w-inline-block"
-                  >
-                    <div class="cta-text">Shopper</div>
-                    <div class="line"></div>
-                  </a>
-                </div>
-                <div class="div-block-160">
-                  <div
-                    data-hover="true"
-                    data-delay="0"
-                    data-w-id="77ac171b-a998-9c38-4efe-dd2e23f1613e"
-                    class="dropdown w-dropdown"
-                  >
-                    <div class="country-dropdown-toggle_us w-dropdown-toggle">
-                      <a href="#" class="nav-bar-country-link w-inline-block"
-                        ><img
-                          src="../images/us-flag-150.png"
-                          loading="lazy"
-                          alt=""
-                          class="nav-bar-country-flag"
-                        />
-                        <div class="nav-bar-country-name">US</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="html-embed-3 w-embed w-script">
-              <!--  F’in sweet Webflow Hacks  -->
-              <script>
-                // declare MutationObserver config object
-                // the config object specifies which mutations to observe
-                // in this case it'll observe the class attribute
-                const config = { attributes: true, attributeFilter: ["class"] };
-                // setup the MutationObserver
-                const observer = new MutationObserver(
-                  (mutationsList, observer) => {
-                    // every time the class attribute of the observed element changes
-                    for (let mutation of mutationsList) {
-                      // if the classList contains the w--current class
-                      if (mutation.target.classList.contains("w--current")) {
-                        // add the active class to the element's dot
-                        $(mutation.target).find(".line").addClass(".vis");
-                      } else {
-                        // else if the element's classList doesn't contain the w--current class
-                        // remove the active class from the element's dot
-                        $(mutation.target).find(".line").removeClass(".vis");
-                      }
-                    }
-                  }
-                );
-                // get all links & for each link
-                document.querySelectorAll(".top-link").forEach((link) => {
-                  // start the mutation observer
-                  observer.observe(link, config);
-                });
-              </script>
-            </div>
-          </header>
-        </div>
         <div class="navbar-2-wrapper">
           <div
             data-animation="default"
@@ -264,9 +187,7 @@
                     </a>
                   </nav>
                 </div>
-                <a href="../us/sign-up.html" class="nav-button w-button"
-                  >Sign Up</a
-                >
+                <a href="./sign-up.html" class="nav-button w-button">Sign Up</a>
               </div>
             </div>
           </div>
@@ -368,7 +289,7 @@
                 </div>
               </div>
               <div class="button-bar">
-                <a href="../us/sign-up.html" class="primary-button w-button"
+                <a href="./sign-up.html" class="primary-button w-button"
                   >Get Started</a
                 >
                 <a href="#" class="transparent-button hidden w-inline-block">
@@ -2071,7 +1992,7 @@
               custom package for your business.
             </p>
             <a
-              href="../us/sign-up.html"
+              href="./sign-up.html"
               target="_blank"
               class="primary-button w-button"
               >Request a Demo</a
