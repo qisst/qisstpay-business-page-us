@@ -20,18 +20,37 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      document.getElementById("contact-submit").disabled = true;
       function SubForm() {
         $.ajax({
           url: "https://api.apispreadsheets.com/data/nLiu8R2gXuPy7ey3/",
           type: "post",
           data: $("#wf-form-Signup-form").serializeArray(),
           success: function () {
+            window.location.href = "./done.html";
             $("#wf-form-Signup-form").trigger("reset");
           },
           error: function () {
             $("#wf-form-Signup-form").trigger("reset");
           },
         });
+      }
+      function EnableDisable(txtPassportNumber) {
+        //Reference the Button.
+        var btnSubmit = document.getElementById("contact-submit");
+
+        //Verify the TextBox value.
+        if (
+          fullName.value.trim() != "" &&
+          email.value.trim() != "" &&
+          phoneNumber.value.trim() != ""
+        ) {
+          //Enable the TextBox when TextBox has value.
+          btnSubmit.disabled = false;
+        } else {
+          //Disable the TextBox when TextBox is empty.
+          btnSubmit.disabled = true;
+        }
       }
     </script>
     <script
@@ -155,6 +174,7 @@
                 <h3 class="heading">Apply for QisstPay Demo</h3>
                 <div class="field-container">
                   <input
+                    onkeyup="EnableDisable(this)"
                     type="text"
                     class="text-field w-input"
                     maxlength="256"
@@ -168,6 +188,7 @@
                 </div>
                 <div class="field-container">
                   <input
+                    onkeyup="EnableDisable(this)"
                     type="text"
                     class="text-field w-input"
                     maxlength="256"
@@ -181,6 +202,7 @@
                 </div>
                 <div class="field-container">
                   <input
+                    onkeyup="EnableDisable(this)"
                     type="text"
                     class="text-field w-input"
                     maxlength="256"
@@ -239,13 +261,16 @@
                 <button
                   onclick="SubForm()"
                   type="submit"
+                  value="Submit"
+                  disabled="disabled"
                   id="contact-submit"
                   class="submit-button w-button"
+                  style="display: flex; justify-content: center"
                 >
                   Submit
                 </button>
               </form>
-              <div class="success-message w-form-done">
+              <!-- <div class="success-message w-form-done">
                 <img
                   src="../images/thank-you.svg"
                   loading="lazy"
@@ -260,7 +285,7 @@
               </div>
               <div class="w-form-fail">
                 <div>Oops! Something went wrong while submitting the form.</div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="signup-image-container">

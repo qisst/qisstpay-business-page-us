@@ -9282,6 +9282,12 @@ blockquote {
   font-size: 13px;
   line-height: 1.5384615384615385;
 }
+button:disabled,
+button[disabled] {
+  /* border: 1px solid #999999; */
+  background-color: #cccccc;
+  color: #666666;
+}
 
 .title-link.w--current {
   color: #e72e80;
